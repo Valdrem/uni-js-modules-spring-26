@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Results!</h1>
+    <p>The sum of the numbers is: <span id="sum"></span></p>
+    <p>The product of the numbers is: <span id="product"></span></p>
+    <p>The average of the numbers is: <span id="average"></span></p>
+
+    <script>
+        var numbers = prompt("Please enter 3 numbers separated by commas!");
+        var numArray = numbers.split(",").map(Number);
+
+        if (!numbers.includes(",") || numArray.length !== 3) {
+            alert("Please enter exactly 3 valid numbers separated by commas.");
+        }
+
+        /* Suma and product calculation */
+        var sum = parseInt(numArray.reduce((acc, curr) => acc + curr, 0));
+        var product = parseInt(numArray.reduce((acc, curr) => acc * curr, 1));
+
+        /* Average calculation */
+        var average = parseFloat(sum / numArray.length);
+        var average = average.toFixed(2);
+
+        /* Console log */
+        console.log("The sum of the numbers is: " + sum);
+        console.log("The product of the numbers is: " + product);
+        console.log("The average of the numbers is: " + average);
+
+        /* Html output */
+        document.getElementById("sum").textContent = sum;
+        document.getElementById("product").textContent = product;
+        document.getElementById("average").textContent = average;
+    </script>
+
+</body>
+</html>
