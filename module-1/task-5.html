@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Leap or not?</h1>
+    <p></p>
+
+    <script>
+        var year = prompt("Enter the year!");
+
+        var leap_check = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+
+        console.log(leap_check)
+
+        if (leap_check == true){
+            document.querySelector("p").textContent = year + " is a leap year!"
+        } else {
+            document.querySelector("p").textContent = year + " is not a leap year!"
+        }
+    </script>
+
+</body>
+</html>
