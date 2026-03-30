@@ -8,11 +8,11 @@
     <script>
         var year = prompt("Enter the year!");
 
-        var leap_check = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        var leapCheck = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 
-        console.log(leap_check)
+        console.log(leapCheck)
 
-        if (leap_check == true){
+        if (leapCheck == true){
             document.querySelector("p").textContent = year + " is a leap year!"
         } else {
             document.querySelector("p").textContent = year + " is not a leap year!"
