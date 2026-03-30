@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Square Root Calculator</h1>
+    <p></p>
+
+    <script>
+        var confirmed = confirm("Should I calculate the square root?");
+
+        if (confirmed) {
+            var number = prompt("Enter the number!");
+            
+            if (number < 0) {
+                document.querySelector("p").textContent = "You cannot calculate the square root of a negative number!";
+            } else {
+                var squareRoot = Math.sqrt(number);
+                document.querySelector("p").textContent = "The square root of " + number + " is " + squareRoot;
+            }
+        } else {
+            document.querySelector("p").textContent = "The square root is not calculated.";
+        }
+    </script>
+
+</body>
+</html>
