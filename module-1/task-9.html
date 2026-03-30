@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Prime Numbers</h1>
+    <p></p>
+
+    <script>
+        let number = parseInt(prompt("Enter a number!"));
+        
+        let divisorsList = [];
+
+        for (let nr = 1; nr <= number; nr++) {
+            if (number % nr === 0) {
+                divisorsList.push(nr);
+            }
+        }
+        
+        if (divisorsList.length === 2) {
+            document.querySelector("p").textContent = number + " is a Prime Number!";
+        } else {
+            document.querySelector("p").textContent = number + " is not a Prime Number!";
+        }
+    </script>
+
+</body>
+</html>
