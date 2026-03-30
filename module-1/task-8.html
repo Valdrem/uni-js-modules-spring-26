@@ -2,22 +2,22 @@
 <html>
 <body>
 
-    <h1>Dice Roller</h1>
-    <p></p>
+    <h1>Leap Years List</h1>
+    <ul></ul>
 
     <script>
-        var diceRolls = parseInt(prompt("How many times should I roll the dice?"));
+        var startYear = parseInt(prompt("Enter start year!"));
+        var endYear = parseInt(prompt("Enter end year!"));
 
-        var diceRsList = [];
+        var manyYears = endYear - startYear + 1;
 
-        for (var dr = 0; dr < diceRolls; dr++) {
-            var diceRs = Math.floor(Math.random() * 6) + 1;
-            diceRsList.push(diceRs);
-         }
+        for (var yr = 0; yr < manyYears; yr++) {
+            var year = startYear + yr;
 
-        var totalSum = diceRsList.reduce(function(a, b) {return a + b;}, 0);
-
-        document.querySelector("p").textContent = "Total sum of all dice rolls is: " + totalSum;
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                document.querySelector("ul").innerHTML += "<li>" + year + "</li>";
+            }
+        }
     </script>
 
 </body>
