@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Order of numbers</h1>
+    <p></p>
+
+    <script>
+        let numbers = prompt("Enter 5 numbers and separate them with commas!");
+        numbers = numbers.split(",").map(Number);
+
+        console.log(numbers);
+
+        for (let nmbr = numbers.length - 1; nmbr >= 0; nmbr--) {
+            console.log("Number: " + numbers[nmbr]);
+        }
+    </script>
+
+</body>
+</html>
