@@ -9,14 +9,14 @@
         let paCount = parseInt(prompt("How many participants?")) - 1;
         let paNames = prompt("Enter the names of the participants, separated by commas!");
 
-        // b -> a, to reverse the alphabetical order, while loop starts at the last index
+        // b -> a, to reverse the alphabetical order, while loop starts at the last index, doesn't work otherwise
         paNames = paNames.split(",").map(name => name.trim()).sort((a, b) => b.localeCompare(a));
 
         console.log(paNames);
         
         while (paCount >= 0) {
-            const parName = paNames[paCount];
-            document.querySelector("ol").innerHTML += "<li>" + parName + "</li>";
+            const participant = paNames[paCount];
+            document.querySelector("ol").innerHTML += "<li>" + participant + "</li>";
             paCount = paCount - 1;
         }
     </script>
