@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Order of numbers</h1>
+    <ol></ol>
+
+    <script>
+        let paCount = prompt("How many participants?");
+        let paNames = prompt("Enter the names of the participants!");
+
+        while (paCount > 0) {
+            document.querySelector("ol").innerHTML += "<li>" + paNames + "</li>";
+        }
+
+    </script>
+
+</body>
+</html>
