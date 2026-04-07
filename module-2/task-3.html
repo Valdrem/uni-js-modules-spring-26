@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Dogs</h1>
+    <ol></ol>
+
+    <script>
+        let dogs = prompt("Enter the names of 6 dogs, separated by commas!");
+
+        dogs = dogs.split(",").map(name => name.trim()).sort((a, b) => a.localeCompare(b));
+        count = dogs.length - 1;
+
+        console.log(count);
+        console.log(dogs);
+
+        if (count == 5) {
+            while (count >= 0) {
+                const dog = dogs[count];
+                document.querySelector("ol").innerHTML += "<li>" + dog + "</li>";
+                count = count - 1;
+            }
+        }else {
+            alert("Please enter exactly 6 dog names!");
+        }
+    </script>
+
+</body>
+</html>
