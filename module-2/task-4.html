@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Numbers</h1>
+
+    <script>
+        let number = parseInt(prompt("Enter one number!"));
+
+        let numbers = [];
+        numbers.push(number);
+
+        while (number != 0) {
+            number = parseInt(prompt("Enter one number again!"));
+            numbers.push(number);
+        }
+
+        numbers.sort((a, b) => b - a);
+        console.log(numbers);
+    </script>
+
+</body>
+</html>
