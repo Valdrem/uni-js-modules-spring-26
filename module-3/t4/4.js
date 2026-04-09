@@ -13,3 +13,9 @@ const students = [
     id: '5423679',
   },
 ];
+
+for (const stud of students) {
+  document.getElementById("target").innerHTML += "<option value='" + stud.id + "'>" + stud.name + "</option>";
+  console.log(stud.name, stud.id);
+}
+
