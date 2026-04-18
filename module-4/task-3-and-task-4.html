@@ -37,8 +37,12 @@
             for (let s of show_list) {
                 const article = document.createElement("article");
 
-                article.innerHTML = `<h2>${s.show.name}</h2>`;  
-                article.innerHTML += `<img src="${s.show.image?.medium}" alt="${s.show.name}"></img>`;
+                article.innerHTML = `<h2>${s.show.name}</h2>`;
+                if (s.show.image != null) {
+                    article.innerHTML += `<img src="${s.show.image.medium}" alt="${s.show.name}"></img>`;
+                }else {
+                    article.innerHTML += `<img src="https://placehold.co/210x295?text=Not%20Found" alt="Not Found"></img>`;
+                }
                 article.innerHTML += `<div>${s.show.summary}</div>`;
                 article.innerHTML += `<a href="${s.show.url}" target="_blank">View Details</a>`;
 
