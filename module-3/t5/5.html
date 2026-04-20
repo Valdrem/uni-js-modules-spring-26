@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 5</title>
-    <script src="5.js" defer></script>
+    <script src="5.js"></script>
     <link href="5.css" rel="stylesheet">
 </head>
 
@@ -24,6 +24,23 @@
             <p>This is a footer</p>
         </footer>
     </div>
+
+    <script>
+        for (let picture of picArray){
+            const article = document.createElement("article");
+            const figure = document.createElement("figure");
+
+            article.innerHTML = `<h2>${picture.title}</h2>`;
+
+            figure.innerHTML = `<img src="${picture.image.medium}" alt="${picture.title}">`;
+            figure.innerHTML += `<figcaption>${picture.caption}</figcaption>`;
+            article.appendChild(figure);
+
+            article.innerHTML += `<p>${picture.description}</p>`;
+
+            document.getElementById("pictures").appendChild(article);
+        };
+    </script>
 </body>
 
 </html>
